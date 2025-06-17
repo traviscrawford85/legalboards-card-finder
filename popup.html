@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Find Matter</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      margin: 0; 
+      padding: 20px; 
+      width: 320px; 
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h3 { 
+      margin: 0 0 15px 0; 
+      color: #333;
+      font-size: 18px;
+    }
+    input { 
+      width: 100%; 
+      margin-bottom: 12px; 
+      padding: 10px; 
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    input:focus {
+      outline: none;
+      border-color: #007acc;
+      box-shadow: 0 0 0 2px rgba(0,122,204,0.2);
+    }
+    button { 
+      width: 100%; 
+      padding: 10px; 
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background: #005a9e;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    #results { 
+      margin-top: 15px; 
+      padding: 10px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      min-height: 20px;
+      font-size: 13px;
+    }
+    .success { color: #28a745; }
+    .error { color: #dc3545; }
+    .info { color: #17a2b8; }
+    .help {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #666;
+      line-height: 1.4;
+    }
+    ul {
+      margin: 8px 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>🔍 Legalboards Card Finder</h3>
+    <input type="text" id="query" placeholder="Enter Matter ID (e.g. 2020-00045)" />
+    <button id="search">Search Cards</button>
+    <div id="results"></div>
+    <div class="help">
+      💡 <strong>Tips:</strong><br>
+      • Make sure you're on a Legalboards page<br>
+      • Try partial matches (e.g. "2020" or "00045")<br>
+      • Press Enter to search
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
